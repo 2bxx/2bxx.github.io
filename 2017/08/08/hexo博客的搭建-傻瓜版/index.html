@@ -8,18 +8,23 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>hexo个人博客的搭建(傻瓜版) | 2bxx Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这几天看了一下hexo框架，看到大多数人用来鼓捣个人博客，正好自己最近也挺闲，也入坑鼓捣鼓捣。先说一下入坑前的准备工作。 ###nodejs作为hexo的运行环境，我们是必须要下载的，这里是传送门 nodejs。nodejs的安装就不多说，按照既定流程就可以安装成功。在下载搭建完nodejs后，我们创建一个blog文件夹，这个文件夹作为我们博客的根目录，它可以放在你想要放置的位置，然后打开文件">
-<meta name="keywords" content="-hexo -个人博客">
+  <meta name="description" content="这几天看了一下hexo框架，看到大多数人用来鼓捣个人博客，正好自己最近也挺闲，也入坑鼓捣鼓捣。先说一下入坑前的准备工作，本教程是针对于window系统的，因为没钱用mac，渣渣笔记本也装不起双系统，但是个人觉得原理应该还是大体相同的，除了命令使用和一些细节差异。。 ###git git也是建议安装的，git的安装也是便于我们开发的，下载链接已经给出，注意安装路劲最后是全英文就行，否则可能会出现">
+<meta name="keywords" content="hexo - 个人博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo个人博客的搭建(傻瓜版)">
 <meta property="og:url" content="http://yoursite.com/2017/08/08/hexo博客的搭建-傻瓜版/index.html">
 <meta property="og:site_name" content="2bxx Blog">
-<meta property="og:description" content="这几天看了一下hexo框架，看到大多数人用来鼓捣个人博客，正好自己最近也挺闲，也入坑鼓捣鼓捣。先说一下入坑前的准备工作。 ###nodejs作为hexo的运行环境，我们是必须要下载的，这里是传送门 nodejs。nodejs的安装就不多说，按照既定流程就可以安装成功。在下载搭建完nodejs后，我们创建一个blog文件夹，这个文件夹作为我们博客的根目录，它可以放在你想要放置的位置，然后打开文件">
+<meta property="og:description" content="这几天看了一下hexo框架，看到大多数人用来鼓捣个人博客，正好自己最近也挺闲，也入坑鼓捣鼓捣。先说一下入坑前的准备工作，本教程是针对于window系统的，因为没钱用mac，渣渣笔记本也装不起双系统，但是个人觉得原理应该还是大体相同的，除了命令使用和一些细节差异。。 ###git git也是建议安装的，git的安装也是便于我们开发的，下载链接已经给出，注意安装路劲最后是全英文就行，否则可能会出现">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-08-09T04:35:23.208Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/2bxx/noteImage/master/hexo_1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/2bxx/noteImage/master/hexo_2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/2bxx/noteImage/master/hexo_3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/2bxx/noteImage/master/hexo_4.png">
+<meta property="og:updated_time" content="2017-08-23T03:35:27.753Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo个人博客的搭建(傻瓜版)">
-<meta name="twitter:description" content="这几天看了一下hexo框架，看到大多数人用来鼓捣个人博客，正好自己最近也挺闲，也入坑鼓捣鼓捣。先说一下入坑前的准备工作。 ###nodejs作为hexo的运行环境，我们是必须要下载的，这里是传送门 nodejs。nodejs的安装就不多说，按照既定流程就可以安装成功。在下载搭建完nodejs后，我们创建一个blog文件夹，这个文件夹作为我们博客的根目录，它可以放在你想要放置的位置，然后打开文件">
+<meta name="twitter:description" content="这几天看了一下hexo框架，看到大多数人用来鼓捣个人博客，正好自己最近也挺闲，也入坑鼓捣鼓捣。先说一下入坑前的准备工作，本教程是针对于window系统的，因为没钱用mac，渣渣笔记本也装不起双系统，但是个人觉得原理应该还是大体相同的，除了命令使用和一些细节差异。。 ###git git也是建议安装的，git的安装也是便于我们开发的，下载链接已经给出，注意安装路劲最后是全英文就行，否则可能会出现">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/2bxx/noteImage/master/hexo_1.png">
   
     <link rel="alternative" href="/atom.xml" title="2bxx Blog" type="application/atom+xml">
   
@@ -175,8 +180,66 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>  这几天看了一下hexo框架，看到大多数人用来鼓捣个人博客，正好自己最近也挺闲，也入坑鼓捣鼓捣。<br>先说一下入坑前的准备工作。</p>
-<p>###nodejs<br>作为hexo的运行环境，我们是必须要下载的，这里是传送门 <a href="https://nodejs.org/en/" target="_blank" rel="external">nodejs</a>。<br>nodejs的安装就不多说，按照既定流程就可以安装成功。<br><br>在下载搭建完nodejs后，我们创建一个blog文件夹，这个文件夹作为我们博客的根目录，它可以放在你想要放置的位置，然后打开文件夹，在里面打开命令行，使用npm导入hexo。<br><br>安装代码:<code>npm install hexo -g</code></p>
+        <p>  这几天看了一下hexo框架，看到大多数人用来鼓捣个人博客，正好自己最近也挺闲，也入坑鼓捣鼓捣。<br>先说一下入坑前的准备工作，本教程是针对于window系统的，因为没钱用mac，渣渣笔记本也装不起双系统，但是个人觉得原理应该还是大体相同的，除了命令使用和一些细节差异。。</p>
+<p>###git</p>
+<p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">git</a>也是建议安装的，git的安装也是便于我们开发的，下载链接已经给出，注意安装路劲最后是全英文就行，否则可能会出现一些奇怪的错误.</p>
+<p>###nodejs<br>作为hexo的运行环境，我们是必须要下载的，这里是传送门 <a href="https://nodejs.org/en/" target="_blank" rel="external">nodejs</a>。<br>nodejs的安装就不多说，按照既定流程就可以安装成功。<br><br>在下载搭建完nodejs后，我们创建一个blog文件夹，这个文件夹作为我们博客的根目录，它可以放在你想要放置的位置，然后打开文件夹，在里面使用shift+鼠标右键打开命令行，使用npm输入以下命令导入hexo。<br></p>
+<p>安装代码:<code>npm install hexo -g</code>，</p>
+<p>安装完毕后可以在当前目录输入<code>hexo -v</code>，</p>
+<p>如果控制台输出了版本号等信息，证明安装成功啦。我们可以开始搞事情了~</p>
+<a id="more"></a>
+<p>###let is go<br>准备工作已经就绪，让我们开始进入战斗。首先，我们需要在blog文件夹下打开命令指示符，然后输入<code>hexo init</code>，解释一下这个命令是让hexo模块为我们创建并初始化好我们的个人博客。</p>
+<p><img src="https://raw.githubusercontent.com/2bxx/noteImage/master/hexo_1.png" alt=""></p>
+<p>等待命令运行完毕后我们可以发现，blog文件夹下多了很多文件。<br></p>
+<p>输入<code>hexo generate</code>(或者heox g也可以，算是简写)，这个命令会帮我们创建一个新文章。</p>
+<p><img src="https://raw.githubusercontent.com/2bxx/noteImage/master/hexo_2.png" alt=""></p>
+<p>可能你已经开始烦躁前面balabala了这么多，但是连个效果都没见到，take easy我们还需要输入最后一个magic code</p>
+<p> <code>hexo server</code>，</p>
+<p><img src="https://raw.githubusercontent.com/2bxx/noteImage/master/hexo_3.png" alt=""></p>
+<p>此时打开你的浏览器，输入localhost：4000，你就可以在本地看到你的博客啦~</p>
+<p><img src="https://raw.githubusercontent.com/2bxx/noteImage/master/hexo_4.png" alt=""></p>
+<p>可能你看了以后说，界面很不错，但是不是我想要的，因为里面内容和我没半毛钱关系啊！还是那句话，慢慢来，我们教程才开了头而已。</p>
+<p>界面搭建好后我们需要了解一些信息，我们创建的新文章都会放在blog文件下的source/_posts中，<br>hexo是允许我们使用属于自己的博客主题的，这个下面会讲到。</p>
+<p>到目前为止，我们所做的一切都是在本地上浏览的，这样的博客并不是我们想要的。那么如何将它部署到网上呢？这里有两个方法，</p>
+<ol>
+<li>你申请属于自己的域名，并将它放在你的服务器上。由于这种方法较为麻烦，这里就不演示了，网上有相应的教程，感兴趣的可以自行搜索。</li>
+<li>第二个：使用github部署我们的个人博客，由于github带来的便利性使得它作为我们个人博客的存放地点非常方便。下面讲讲详细部署。</li>
+</ol>
+<p>首先我们需要申请一个<a href="https://github.com/" target="_blank" rel="external">github</a>账户。申请完成后，我们需要创建一个与你github用户名对应的仓库，仓库名必须为【your_username.github.io】,只有这样才能建立联系(关于github仓库的建立，可以参考我的另一篇笔记)。</p>
+<p>接下来需要配置一下我们的信息，在Blog文件夹下找到_config.yml配置文件。<br>这个文件的作用是为我们的个人博客设置相应信息，比如作者个人信息，博客信息。直接跳到最后文件最下面：</p>
+<p>保存后我们在blog文件下打开命令提示符输入<code>npm install hexo-deployer-git --save</code></p>
+<p>然后再执行命令<code>hexo deploy</code>(也可以缩写成hexo d)就可以将个人博客部署到git上啦。</p>
+<p>当命令完成后在浏览器输入<a href="https://your_username(你的用户名).github.io/" target="_blank" rel="external">https://your_username(你的用户名).github.io/</a> 就可以看到你的博客已经部署到github上啦~</p>
+<p>前面我们提到了博客主题的事情，其实hexo是有很多博客主题模板的，点击这里浏览更多<a href="https://hexo.io/themes/" target="_blank" rel="external">主题</a>。</p>
+<p>选择一个你喜欢的主题后，在blog文件夹下打开右键git bash编辑界面输入</p>
+<p><code>git clone 你喜欢的主题的下载地址</code></p>
+<p>当主题下载完后blog文件夹下会多了一个themes文件，里面放的就是我们的主题。每个主题的使用方法可能不一样，但是主题作者都有提供，安装作者的提示使用就可以了。</p>
+<p>hexo博客的搭建到此就结束啦~</p>
+<p>我们的博客每次的部署步骤有三：</p>
+<ol>
+<li><code>hexo clean</code></li>
+<li><code>hexo generate</code></li>
+<li><code>hexo deploy</code></li>
+</ol>
+<p>下面贴一下几个我们会经常用的hexo命令</p>
+<ul>
+<li><p><code>hexo new &#39;postname&#39;</code> //新建文章</p>
+</li>
+<li><p><code>hexo new page &#39;pagename&#39;</code>  //新建页面</p>
+</li>
+<li><p><code>hexo generate</code>  //生成静态页面到public目录</p>
+</li>
+<li><p><code>hexo deploy</code>  //将博客部署到github上</p>
+</li>
+<li><p><code>hexo server</code>  //开启本地访问端口</p>
+</li>
+<li><p><code>hexo help</code>  //查看hexo帮助</p>
+</li>
+<li><p><code>hexo version</code>  //查看hexo版本</p>
+</li>
+</ul>
+<p>###关于hexo的文章编辑</p>
+<p>值得注意的是hexo文章是markdown格式的，这里推荐一个window下markdown文本编辑器<br><a href="https://markdownpad.com/" target="_blank" rel="external">markdownpad</a>.关于markdown文本的语法非常简单，网上学习资料特别多，花个十几分钟就能学会了，这里就不过多撰述了。</p>
 
       
 
@@ -211,7 +274,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-hexo -个人博客</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hexo - 个人博客</a>
         		</li>
       		
 		</ul>
@@ -407,11 +470,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo 个人博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">-hexo -个人博客</a>
+                <a href="javascript:void(0)" class="js-tag color2">hexo - 个人博客</a>
               </li>
             
             <div class="clearfix"></div>
