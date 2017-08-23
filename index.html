@@ -46,7 +46,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/mynodejs/nodejs/Blog/themes/yilia/source/img/image.jpg" class="js-avatar">
+			<img src="https://raw.githubusercontent.com/2bxx/noteImage/master/picture.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">2bxx</a></h1>
@@ -104,7 +104,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/mynodejs/nodejs/Blog/themes/yilia/source/img/image.jpg" class="js-avatar">
+				<img src="https://raw.githubusercontent.com/2bxx/noteImage/master/picture.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">2bxx</h1>
@@ -155,35 +155,40 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hexo博客的搭建-傻瓜版" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-创建个人仓库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/08/hexo博客的搭建-傻瓜版/">hexo个人博客的搭建(傻瓜版)</a>
+      <a class="article-title" href="/2017/08/23/创建个人仓库/">创建个人仓库</a>
     </h1>
   
 
         
-        <a href="/2017/08/08/hexo博客的搭建-傻瓜版/" class="archive-article-date">
-  	<time datetime="2017-08-08T08:30:26.648Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-08</time>
+        <a href="/2017/08/23/创建个人仓库/" class="archive-article-date">
+  	<time datetime="2017-08-23T06:18:32.574Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>  这几天看了一下hexo框架，看到大多数人用来鼓捣个人博客，正好自己最近也挺闲，也入坑鼓捣鼓捣。<br>先说一下入坑前的准备工作，本教程是针对于window系统的，因为没钱用mac，渣渣笔记本也装不起双系统，但是个人觉得原理应该还是大体相同的，除了命令使用和一些细节差异。。</p>
-<p>###git</p>
-<p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">git</a>也是建议安装的，git的安装也是便于我们开发的，下载链接已经给出，注意安装路劲最后是全英文就行，否则可能会出现一些奇怪的错误.</p>
-<p>###nodejs<br>作为hexo的运行环境，我们是必须要下载的，这里是传送门 <a href="https://nodejs.org/en/" target="_blank" rel="external">nodejs</a>。<br>nodejs的安装就不多说，按照既定流程就可以安装成功。<br><br>在下载搭建完nodejs后，我们创建一个blog文件夹，这个文件夹作为我们博客的根目录，它可以放在你想要放置的位置，然后打开文件夹，在里面使用shift+鼠标右键打开命令行，使用npm输入以下命令导入hexo。<br></p>
-<p>安装代码:<code>npm install hexo -g</code>，</p>
-<p>安装完毕后可以在当前目录输入<code>hexo -v</code>，</p>
-<p>如果控制台输出了版本号等信息，证明安装成功啦。我们可以开始搞事情了~</p>
+        <p>我们知道，git是通过版本库管理的。这个版本库，我们可以理解成一个仓库，里面放着的货物都会被git管理。每个货物的进出和删除记录都会被git跟踪。<br>先说一点，这个仓库我们可以通过git来创建或者手动创建，在你想要创建仓库的地方打开git,输入以下命令(比如我们创建一个名noteimage的仓库)：</p>
+<pre><code>mkdir noteimage//文件名字自己定，这里是演示
+cd noteimage
+</code></pre><p>注：为了避免奇怪的问题，建议仓库名以及它的父文件名为全英文<br>创建好仓库后，我们需要告诉git我们需要管理这个仓库，在当前文件下输入以下命令：</p>
+<pre><code>git init
+</code></pre><p>贴一张完整的图演示一下：</p>
+<p><img src="https://raw.githubusercontent.com/2bxx/noteImage/master/git/git01.gif" alt=""></p>
+<p>到此我们的仓库就已经被git成功的管理起来了。<br>然而问题来了，空的仓库怎么管理….所以我们需要往这个仓库里面放货物，至于是什么货物可以按照你的喜好来,将你要添加的货物创建或者复制到git的管理仓库下后。输入下面的命令：</p>
+<pre><code>git add yourfilename //解释一下这里填你要放的文件名
+git commit -m &apos;detail&apos; //detail里面填你对本次提交的描述，便于你阅读。
+</code></pre><p>git add  filename 命令表示我们将此文件加入版本库被管理，但是此时文件还不真正的存在版本库中，当我们使用git commit -m ‘detail’命令后，文件才会被提交到版本库中。还是演示一下吧：</p>
+<p><img src="https://raw.githubusercontent.com/2bxx/noteImage/master/git/git02.gif" alt=""></p>
         
-          <a class="article-more-a" href="/2017/08/08/hexo博客的搭建-傻瓜版/#more">more >></a>
+          <a class="article-more-a" href="/2017/08/23/创建个人仓库/#more">more >></a>
         
       
 
@@ -197,7 +202,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hexo - 个人博客</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人仓库</a>
         		</li>
       		
 		</ul>
@@ -207,7 +216,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/08/hexo博客的搭建-傻瓜版/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/08/23/创建个人仓库/">展开全文 >></a>
         </p>
       
 
@@ -237,30 +246,35 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-hexo博客的搭建-傻瓜版" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/08/hello-world/">Hello World</a>
+      <a class="article-title" href="/2017/08/08/hexo博客的搭建-傻瓜版/">hexo个人博客的搭建(傻瓜版)</a>
     </h1>
   
 
         
-        <a href="/2017/08/08/hello-world/" class="archive-article-date">
-  	<time datetime="2017-08-08T07:43:19.569Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-08</time>
+        <a href="/2017/08/08/hexo博客的搭建-傻瓜版/" class="archive-article-date">
+  	<time datetime="2017-08-08T08:30:26.648Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-
+        <p>  这几天看了一下hexo框架，看到大多数人用来鼓捣个人博客，正好自己最近也挺闲，也入坑鼓捣鼓捣。<br>先说一下入坑前的准备工作，本教程是针对于window系统的，因为没钱用mac，渣渣笔记本也装不起双系统，但是个人觉得原理应该还是大体相同的，除了命令使用和一些细节差异。。</p>
+<h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">git</a>也是建议安装的，git的安装也是便于我们开发的，下载链接已经给出，注意安装路劲最后是全英文就行，否则可能会出现一些奇怪的错误.</p>
+<h3 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h3><p>作为hexo的运行环境，我们是必须要下载的，这里是传送门 <a href="https://nodejs.org/en/" target="_blank" rel="external">nodejs</a>。<br>nodejs的安装就不多说，按照既定流程就可以安装成功。<br><br>在下载搭建完nodejs后，我们创建一个blog文件夹，这个文件夹作为我们博客的根目录，它可以放在你想要放置的位置，然后打开文件夹，在里面使用shift+鼠标右键打开命令行，使用npm输入以下命令导入hexo。<br></p>
+<p>安装代码:<code>npm install hexo -g</code>，</p>
+<p>安装完毕后可以在当前目录输入<code>hexo -v</code>，</p>
+<p>如果控制台输出了版本号等信息，证明安装成功啦。我们可以开始搞事情了~</p>
+        
+          <a class="article-more-a" href="/2017/08/08/hexo博客的搭建-傻瓜版/#more">more >></a>
+        
       
 
       
@@ -268,11 +282,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hexo - 个人博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/08/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/08/08/hexo博客的搭建-傻瓜版/">展开全文 >></a>
         </p>
       
 
@@ -396,6 +421,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">hexo - 个人博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">个人仓库</a>
               </li>
             
             <div class="clearfix"></div>
